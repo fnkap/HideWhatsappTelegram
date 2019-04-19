@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "HWT",
+  "description": "Hide media for WhatsApp™ Web and Telegram™ Web",
+  "version": "0.1",
+  "permissions": ["https://web.whatsapp.com/", "https://web.telegram.org/"],
+  "browser_action": {
+    "default_icon": {
+      "19": "icon19x19.png",
+      "38": "icon38x38.png"
+    },
+    "default_title": "Hiding media on WhatsApp™ Web and Telegram™ Web, hover to see it"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.whatsapp.com/*", "https://web.telegram.org/*"
+      ],
+      "css": ["style.css"]
+    }
+  ]
+}
